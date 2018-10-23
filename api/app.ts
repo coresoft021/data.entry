@@ -1,17 +1,18 @@
-
 const express = require('express');
 const app = express();
 const path = require('path');
 var cors = require('cors');
 
+import { json, urlencoded } from "body-parser";
 const port =  process.env.PORT || 8080;
 
 
 
 app.use(express.static(__dirname + '/public'));
 app.use(cors());
+app.use(urlencoded({ extended: true }));
+app.use(json());
 
-app.use("/api/public", publicRouter);
 
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
