@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 });
 
  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile('./public/index.html'));
 });
 
 app.get('/api', function (req, res) {
