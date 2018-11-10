@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 });
 
  app.get('/', function (req, res) {
-    res.sendFile('./public/index.html'));
+     res.end('file catcher example');
 });
 
 app.get('/api', function (req, res) {
