@@ -30,7 +30,11 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
- 
+
+ app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
 app.get('/api', function (req, res) {
   res.end('file catcher example');
 });
